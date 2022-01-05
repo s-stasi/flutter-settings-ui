@@ -77,7 +77,8 @@ class CupertinoSettingsItemState extends State<CupertinoSettingsItem> {
     final isLargeScreen = MediaQuery.of(context).size.width >= 768;
 
     final ThemeData theme = Theme.of(context);
-    final ListTileTheme tileTheme = ListTileTheme.of(context);
+    final ListTileTheme tileTheme =
+        ListTileTheme(data: ListTileTheme.of(context), child: Container());
 
     final iconThemeData = IconThemeData(
       color: widget.enabled
